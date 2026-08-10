@@ -1,0 +1,8 @@
+The basic prototype has some limitations:
+
+Generated captions may not always be grammatically perfect.
+Similar objects can be confused.
+Complex scenes are difficult to describe.
+The basic ResNet demonstration doesn't understand relationships between objects.
+Internet may be required initially to download pretrained model weights.
+The model can inherit biases from its training data.

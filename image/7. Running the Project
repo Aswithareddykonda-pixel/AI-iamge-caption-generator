@@ -1,0 +1,7 @@
+Put an image inside:
+
+images/sample.jpg
+
+Then run:
+
+python caption_generator.py

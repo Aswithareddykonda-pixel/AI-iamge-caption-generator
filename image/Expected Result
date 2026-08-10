@@ -1,0 +1,23 @@
+he system should:
+
+Accept an image.
+Preprocess the image.
+Extract visual features.
+Identify important objects.
+Generate a textual description.
+Display the generated caption.
+
+Example:
+
+INPUT
+ ┌──────────────────────┐
+ │                      │
+ │   🐕     🌳          │
+ │        🧑            │
+ │                      │
+ └──────────────────────┘
+
+OUTPUT
+
+"A dog and a person are
+outside in a park."

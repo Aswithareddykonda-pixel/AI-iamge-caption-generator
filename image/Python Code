@@ -1,0 +1,72 @@
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+
+from tensorflow.keras.applications import ResNet50
+from tensorflow.keras.applications.resnet50 import (
+    preprocess_input,
+    decode_predictions
+)
+
+
+# Load pretrained ResNet50 model
+model = ResNet50(weights="imagenet")
+
+
+def generate_caption(image_path):
+
+    # Load image
+    image = Image.open(image_path).convert("RGB")
+    image = image.resize((224, 224))
+
+    # Convert image to numpy array
+    image_array = np.array(image)
+
+    # Add batch dimension
+    image_array = np.expand_dims(image_array, axis=0)
+
+    # Preprocess image
+    image_array = preprocess_input(image_array)
+
+    # Predict objects
+    predictions = model.predict(image_array, verbose=0)
+
+    # Get top predictions
+    results = decode_predictions(predictions, top=3)[0]
+
+    objects = [item[1].replace("_", " ") for item in results]
+
+    # Generate simple caption
+    if len(objects) >= 3:
+        caption = (
+            f"A picture containing {objects[0]}, "
+            f"with {objects[1]} and {objects[2]}."
+        )
+
+    elif len(objects) == 2:
+        caption = (
+            f"A picture containing {objects[0]} "
+            f"and {objects[1]}."
+        )
+
+    else:
+        caption = f"A picture containing {objects[0]}."
+
+    return caption, objects
+
+
+if __name__ == "__main__":
+
+    image_path = "images/sample.jpg"
+
+    caption, objects = generate_caption(image_path)
+
+    print("\nAI IMAGE CAPTION GENERATOR")
+    print("--------------------------------")
+
+    print("Detected Objects:")
+    for obj in objects:
+        print("-", obj)
+
+    print("\nGenerated Caption:")
+    print(caption)

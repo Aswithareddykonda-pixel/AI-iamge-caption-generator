@@ -1,0 +1,11 @@
+Objective
+
+The objective is to develop an AI system that understands the content of an image and automatically generates a natural-language description.
+
+Example:
+
+Input Image:
+[Image of a dog playing in a park]
+
+Generated Caption:
+"A dog is playing in the grass."

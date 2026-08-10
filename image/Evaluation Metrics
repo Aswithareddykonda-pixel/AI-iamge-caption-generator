@@ -1,0 +1,16 @@
+For a more advanced project, you can evaluate generated captions using:
+
+BLEU
+METEOR
+ROUGE
+CIDEr
+SPICE
+
+For example:
+
+Evaluation Results
+----------------------------
+BLEU-1       : 0.72
+BLEU-2       : 0.58
+BLEU-3       : 0.46
+BLEU-4       : 0.35

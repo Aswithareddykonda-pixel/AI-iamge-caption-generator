@@ -1,0 +1,40 @@
+Suppose the input image contains a dog.
+
+=========================================
+      AI IMAGE CAPTION GENERATOR
+=========================================
+
+Input Image:
+sample.jpg
+
+Processing image...
+Extracting image features...
+Detecting objects...
+Generating caption...
+
+Detected Objects:
+- golden retriever
+- Labrador retriever
+- dog
+
+Generated Caption:
+A picture containing golden retriever,
+with Labrador retriever and dog.
+
+=========================================
+Another example
+
+Input:
+
+Image: A person riding a bicycle
+
+Possible output:
+
+Detected Objects:
+- bicycle
+- mountain bike
+- person
+
+Generated Caption:
+A picture containing bicycle,
+with mountain bike and person.x

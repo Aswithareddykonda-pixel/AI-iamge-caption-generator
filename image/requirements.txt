@@ -1,0 +1,14 @@
+Create:
+
+requirements.txt
+
+Add:
+
+tensorflow
+numpy
+pillow
+matplotlib
+
+Install them using:
+
+pip install -r requirements.txt
